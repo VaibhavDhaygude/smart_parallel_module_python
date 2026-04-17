@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "smart_parallel"
+version = "0.1.0"
+description = "Automatically choose between threads and processes for parallel execution"
+requires-python = ">=3.8"
+license = "MIT"
+authors = [{ name = "Vaibhav" }]
+dependencies = ["psutil"]
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+[project.urls]
+Homepage = "https://github.com/vaibhav/smart_parallel"
+Issues = "https://github.com/vaibhav/smart_parallel/issues"
+

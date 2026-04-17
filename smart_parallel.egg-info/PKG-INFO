@@ -1,0 +1,32 @@
+Metadata-Version: 2.4
+Name: smart_parallel
+Version: 0.1.0
+Summary: Automatically choose between threads and processes for parallel execution
+Author: Vaibhav
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/vaibhav/smart_parallel
+Project-URL: Issues, https://github.com/vaibhav/smart_parallel/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: psutil
+Dynamic: license-file
+
+# smart-parallel
+
+Auto-optimized parallel execution for Python.
+
+## Usage
+
+from smart_parallel import smart_map
+
+def work(x):
+    return x * x
+
+results = smart_map(work, range(1000))
+
+# Optional: execute sample profiling (off by default to avoid duplicate side effects)
+results = smart_map(work, range(1000), profile=True)
